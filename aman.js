@@ -56,10 +56,9 @@ var birthYear = dob.split("-");
 let year=birthYear[0]
 var age = currentYear-year
 console.log({age,currentYear,birthYear})
-if(age < 18 || age > 50){
+if(age < 19 || age > 51){
     document.getElementById('dob').style='border:1px solid red'
-  return  alert("Age must be between 18 and 50")
-
+  return  alert("Age must be between 18 and 50 OTHERWISE REJECTED")
 }
 else
 {
@@ -76,9 +75,7 @@ const entry ={
      localStorage.setItem("userEntries",JSON.stringify(userEntries))
     displayEntries()
     userForm.reset()
-   
 }
- 
 }
 userForm.addEventListener('submit',saveUserForm)
 displayEntries()
